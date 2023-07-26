@@ -1,0 +1,28 @@
+@media screen and (max-width:640px){
+    body,.nav-bar,.conteneur,.footer,.table-matiere
+    {
+        width:100%;
+    }
+    
+    body
+    {
+        display: block;
+    }
+
+    h1
+    {
+        font-size: 1.3em;
+    }
+
+    .table-matiere
+    {
+        display: block;
+    }
+
+    .conteneur
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
