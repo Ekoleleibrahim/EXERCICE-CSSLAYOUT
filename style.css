@@ -159,3 +159,111 @@ a:hover
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Au cas où la largeur de l'écran est inférieur à 600 pixels, nous allons appliquer ces styles: */
+
+@media all and (max-width:600px){
+    body,.nav-bar,.conteneur,.footer,.table-matiere
+    {
+        width:auto;
+        box-sizing: border-box;
+    }
+    
+    body
+    {
+        display: grid;
+        grid-template-areas: "entete entete"
+                            "nav-bar table-matiere"
+                            "conteneur conteneur"
+                            "pied pied";
+        justify-content: center;
+        font-family: sans-serif;
+    }
+
+    h1
+    {
+        font-size: 1.3em;
+    }
+    
+    
+    a
+    {
+        color: white;
+        font-size: 1.1em;
+    }
+
+    .conteneur
+    {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10px;
+        row-gap: 10px;
+    }
+
+    .bold
+    {
+        font-family: sans-serif;
+    }
+}
+
+/* Dans le où la largeur minimale de l'écran est 601 pixels, nous allons appliquer ces styles: */
+
+@media all and (min-width:601px) {
+    body,.nav-bar,.conteneur,.footer,.table-matiere
+    {
+        width:auto;
+        box-sizing: border-box;
+    }
+    
+    body
+    {
+        display: grid;
+        grid-template-areas: "entete entete"
+                            "nav-bar table-matiere"
+                            "conteneur conteneur"
+                            "pied pied";
+        justify-content: center;
+        font-family: sans-serif;
+    }
+
+    .conteneur
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+/* Au cas où la largeur minimale est de 1280 pixels ou plus, le navigateur 
+   chargera le style du CSS par défaut
+ */
+
+@media all and (min-width:1280px) {
+    body
+    {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(237, 235, 235);
+        display: grid;
+        grid-template-areas: "entete entete entete"
+                            "nav-bar conteneur table-matiere"
+                            "pied pied pied";
+        justify-content: center;
+        font-family: sans-serif;
+    }  
+
+
+    .conteneur
+    {
+        border: 1px solid gray;
+        width: 1000px;
+        display: grid;
+        grid-template-rows: repeat(3,160px);
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        
+    }
+}
